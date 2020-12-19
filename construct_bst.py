@@ -1,5 +1,6 @@
 # given a pre order traversal construct a binary tree
 
+
 class Node:
     def __init__(self, value):
 
@@ -39,22 +40,22 @@ class BST:
 
         while len(queue) > 0:
             current_node = queue.pop()
-   
+
             order_list.append(current_node.value)
 
             if current_node.left is not None:
-                queue.insert(0,current_node.left)
+                queue.insert(0, current_node.left)
 
             if current_node.right is not None:
-                queue.insert(0,current_node.right)
+                queue.insert(0, current_node.right)
 
         return order_list
 
     def breadth_first_traversal_recursive(self, queue, array):
 
-        if len(queue) == 0 :
+        if len(queue) == 0:
             return array
-        
+
         current_node = queue.pop()
         array.append(current_node.value)
 
@@ -62,11 +63,9 @@ class BST:
             queue.insert(0, current_node.left)
 
         if current_node.right is not None:
-            queue.insert(0,current_node.right)
+            queue.insert(0, current_node.right)
 
         return self.breadth_first_traversal_recursive(queue, array)
-
-        
 
     def lookup(self, value):
 
@@ -88,7 +87,7 @@ class BST:
 
         if self.root is None:
             self.root = newNode
-  
+
         else:
             currentNode = self.root
             while True:
@@ -96,10 +95,10 @@ class BST:
                     if currentNode.left is None:
                         currentNode.left = newNode
                         return self
-    
+
                     currentNode = currentNode.left
 
-                else: 
+                else:
                     if currentNode.right is None:
                         currentNode.right = newNode
                         return self
@@ -115,7 +114,7 @@ class BST:
 
         if node.right is not None:
             self.dfs_in_order(node.right, list)
-        
+
         return list
 
     def dfs_pre_order(self, node, list):
@@ -127,7 +126,7 @@ class BST:
 
         if node.right:
             self.dfs_pre_order(node.right, list)
-        
+
         return list
 
     def dfs_post_order(self, node, list):
@@ -139,8 +138,5 @@ class BST:
             self.dfs_post_order(node.right, list)
 
         list.append(node.value)
-        
+
         return list
-
-                
-

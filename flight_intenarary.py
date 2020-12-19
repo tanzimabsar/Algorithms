@@ -1,7 +1,7 @@
 from typing import List
 
-class Solution:
 
+class Solution:
     def findItinerary(self, tickets, current):
 
         if not tickets:
@@ -10,7 +10,7 @@ class Solution:
         graph = {}
 
         # Create the keys that are needed for this data structure
-    
+
         for source in tickets:
 
             graph[source[0]] = []
@@ -34,16 +34,18 @@ class Solution:
 
             stack.append(node)
 
-        helper('JFK')
-        
+        helper("JFK")
+
         return stack[::-1]
 
 
-
-
 sol = Solution()
-print(sol.findItinerary([["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]], []))
-#print(sol.findItinerary([["MUC", "LHR"], ["SFO", "SJC"], ["LHR", "SFO"]], []))
+print(
+    sol.findItinerary(
+        [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]], []
+    )
+)
+# print(sol.findItinerary([["MUC", "LHR"], ["SFO", "SJC"], ["LHR", "SFO"]], []))
 
 
-# JFK MUC LHR SFO SJC 
+# JFK MUC LHR SFO SJC

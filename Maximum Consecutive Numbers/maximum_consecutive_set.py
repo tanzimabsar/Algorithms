@@ -13,5 +13,5 @@ def findMax(numbers, n):
     return ans
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(findMax([1, 94, 93, 1000, 5, 92, 73], 3))

@@ -1,5 +1,5 @@
 def numCoins(cents):
-    
+
     coins = [25, 10, 5, 1]
 
     result = 0
@@ -17,9 +17,7 @@ def numCoins(cents):
 
         elif cents % x > 0:
             cents = cents % x
-            result += 1 
-
-        
+            result += 1
 
     return result
 

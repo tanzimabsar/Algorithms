@@ -1,3 +1,6 @@
+""" Binary Search Implementation from scratch """
+
+
 def binarySearch(arr, l, r, x):
 
     # Check base case

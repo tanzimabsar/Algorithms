@@ -6,14 +6,11 @@ from collections import defaultdict
 # This class represents a directed graph
 # using adjacency list representation
 class Graph:
-
-    # Constructor
     def __init__(self):
 
-        # default dictionary to store graph
+        # default dictionary to store graph in an adjacency list
         self.graph = defaultdict(list)
 
-    # function to add an edge to graph
     def addEdge(self, u, v):
         self.graph[u].append(v)
 
@@ -43,6 +40,7 @@ class Graph:
             # has not been visited, then mark it
             # visited and enqueue it
             for i in self.graph[s]:
+
                 if visited[i] == False:
                     queue.append(i)
                     visited[i] = True

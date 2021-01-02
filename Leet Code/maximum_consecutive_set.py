@@ -1,3 +1,8 @@
+""" Maximum Consecutive Set: 
+    Get the largest subset of numbers in an array that are next to each other
+"""
+
+
 def findMax(numbers, n):
     setNumbers = set(numbers)
     ans = 0

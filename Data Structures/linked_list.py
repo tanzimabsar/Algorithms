@@ -2,7 +2,6 @@
 
 
 class Node:
-
     def __init__(self, data=None, next_node=None):
 
         self.data = data
@@ -17,8 +16,8 @@ class Node:
     def set_next(self, new_next):
         self.next_node = new_next
 
-class LinkedList(object):
 
+class LinkedList(object):
     def __init__(self, head=None):
         self.head = head
 
@@ -44,7 +43,3 @@ myList.insert(3)
 
 
 print(myList.size())
-
-
-
-

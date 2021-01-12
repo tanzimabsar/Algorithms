@@ -1,4 +1,6 @@
-initial_matrix = [[0, 1, 1], [0, 1, 0], [1, 1, 1]]
+"""
+Leet Code Question: Flood Fill
+"""
 
 
 def flood_fill(image, i, j, new_colour):
@@ -27,6 +29,8 @@ def flood_fill(image, i, j, new_colour):
 
     return image
 
+
+initial_matrix = [[0, 1, 1], [0, 1, 0], [1, 1, 1]]
 
 print(initial_matrix)
 
